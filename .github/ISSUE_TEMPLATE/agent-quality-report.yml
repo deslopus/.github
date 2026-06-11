@@ -1,0 +1,34 @@
+name: Agent quality report
+description: Report a concrete case where a coding agent produced poor, unsafe, or hard-to-maintain output.
+title: "[Agent Quality] "
+labels:
+  - agent-quality
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Describe the codebase, task, agent, model, tools, and relevant constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened
+      description: Describe the output, failure mode, or maintenance risk.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Better behavior
+      description: What should the agent have done instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link to code, logs, benchmark output, or a minimal reproduction. Do not include secrets or private data.
+    validations:
+      required: false
